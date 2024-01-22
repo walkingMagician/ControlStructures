@@ -142,15 +142,12 @@ int main()
 #ifdef CHESS_TWO_CYCLE
 
 	setlocale(LC_ALL, "ru");
-	int j;
-	cout << "j = "; cin >> j;
-
 
 	for (int i = 0; i < n * n; i++)	// вертикаль
 	{
-		for (int f = 0; f < j * j; f++)	// горизонталь 
+		for (int f = 0; f < n * n; f++)	// горизонталь 
 		{
-			if (((f / j) + (i / n)) % 2 == 0 )	// 
+			if (((f / n) + (i / n)) % 2 == 0 )	// 
 				cout << "* ";
 			else
 				cout << "  ";
